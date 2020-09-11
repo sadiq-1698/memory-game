@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal/intro-modal.css">
+    <link rel="stylesheet" href="css/modal/lose-modal.css">
+    <link rel="stylesheet" href="css/modal/win-modal.css">
+    <link rel="stylesheet" href="css/flip/flip.css">
+    <link rel="stylesheet" href="css/game/game-container.css">
+
+</head>
+
+<body onload="onReload();">
+    <div class="container">
+        <div class="modal-container" id="modal-container">
+            <div class="modal-header">
+                <h2>Memory game</h2>
+            </div>
+            <p>You have 60 seconds to match all the pair of cards. Let's put your memory into test.</p>
+            <div class="modal-btn-container">
+                <button class="start-btn" id="start-btn" onclick="startGame();">
+                    Start game
+                </button>
+            </div>
+        </div>
+        <div class="game-container" id="game-container">
+            <div class="timer-div">
+                <h1 id="counter">01:00</h1>
+            </div>
+            <div class="grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="one-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/apple.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="two-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/bananas.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="three-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/blueberry.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="four-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/orange.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="five-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/pear.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="five-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/pear.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="six-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/watermelon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="one-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/apple.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="six-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/watermelon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="seven-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/tomato.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="eight-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/mango.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="two-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/bananas.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="nine-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/pineapple.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="four-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/orange.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="ten-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/strawberry.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="nine-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/pineapple.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="ten-first" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/strawberry.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="seven-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/tomato.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="eight-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/mango.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner" id="three-second" onclick="getElement(this.id);">
+                        <div class="flip-card-front">
+                            <img src="images/question.svg" alt="">
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="images/blueberry.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="game-lost-modal-container" id="you-lost">
+            <div class="modal-header">
+                <h2>You lost</h2>
+            </div>
+            <p>No worries! Try again?</p>
+            <div class="modal-btn-container">
+                <button class="cancel-btn" id="cancel-btn" onclick="goHome();">
+                    No
+                </button>
+                <button class="play-again-btn" id="play-again-btn" onclick="retry();">
+                    Yes
+                </button>
+            </div>
+        </div>
+        <div class="game-won-modal-container" id="you-won">
+            <div class="modal-header">
+                <h2>You won</h2>
+            </div>
+            <p>Yay! Look who's got a good memory</p>
+            <div class="modal-btn-container">
+                <button class="play-again-btn" id="start-btn" onclick="retry();">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

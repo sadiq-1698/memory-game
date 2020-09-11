@@ -1,0 +1,160 @@
+.grid .flip-card {
+    margin: 0.5rem;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    border: none;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card .flip-card-inner img {
+    width: 50px;
+    height: 50px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .grid .flip-card {
+        width: 110px;
+        height: 110px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .grid .flip-card {
+        width: 100px;
+        height: 100px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .grid .flip-card {
+        width: 100px;
+        height: 100px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .grid .flip-card {
+        width: 100px;
+        height: 100px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid .flip-card {
+        width: 70px;
+        height: 70px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid .flip-card {
+        width: 70px;
+        height: 70px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grid .flip-card {
+        width: 70px;
+        height: 70px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .grid .flip-card {
+        width: 70px;
+        height: 70px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid .flip-card {
+        width: 60px;
+        height: 60px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .grid .flip-card {
+        width: 60px;
+        height: 60px;
+    }
+    .flip-card .flip-card-inner img {
+        width: 25px;
+        height: 25px;
+    }
+}
